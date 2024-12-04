@@ -1,0 +1,33 @@
+# System prompt for code completion
+sys: |
+  You are an intelligent agent who excels at strategy games. You will be provided with a description of the game, and your job will be to decide what your strategy will be.
+
+
+# Feedback-less prompt for initial code generation
+query_direct: |
+  I'm going to give you $100 dollars. You're going to split it with Alice. You can choose how much you give yourself and how much you give Alice. If Alice accepts your deal, then you will both receive the money according to your proposed allocation. If Alice rejects your deal, neither of you will receive any money. 
+
+  Write your answer in the following format:
+
+  Me: $[number]
+  Alice: $[number]
+
+  Do not write any other text. Only write this number.
+
+prefill_direct: |
+  Me:
+
+query_cot: |
+  I'm going to give you $100 dollars. You're going to split it with Alice. You can choose how much you give yourself and how much you give Alice. If Alice accepts your deal, then you will both receive the money according to your proposed allocation. If Alice rejects your deal, neither of you will receive any money. 
+
+  Write at least one paragraph of reasoning before you give your final answr. Write your response in the following format:
+
+  <Your reasoning>
+  
+  Me: $[number]
+  Alice: $[number]
+
+
+
+prefill_cot: |
+  Let's think step by step.
